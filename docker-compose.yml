@@ -1,0 +1,17 @@
+version: "3"
+services:
+  betty:
+    image: eightlimbed/betty-docker
+    command: tail -f /dev/null
+    volumes:
+      - ".:/root/"
+  shellcheck:
+    image: koalaman/shellcheck-alpine
+    command: ["ash"]
+    volumes:
+      - .:./
+  pep8:
+    image: eeacms/pep8
+    command: ["ash"]
+    volumes:
+      - .:./
