@@ -9,6 +9,7 @@ if len(argv) < 2:
     exit()
 
 cwd = os.getcwd()
+path = cwd.split('/')
 args = ['docker', 'run', '--rm', '-it', '--name', 'bettyd']
 args += ['--mount', 'type=bind,source={},target=/Betty'.format(cwd)]
 args += ['betty-docker', 'betty']
