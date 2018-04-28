@@ -14,4 +14,4 @@ args += ['--mount', f'type=bind,source={cwd},target=/Betty']
 args += ['betty-docker', 'betty']
 for arg in argv[1:]:
     args.append(arg)
-subprocess.run(args)
+subprocess.call(args)
