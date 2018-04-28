@@ -1,19 +1,43 @@
 version: "3"
+
 services:
+  # start betty service
   betty:
     image: eightlimbed/betty-docker
     command: tail -f /dev/null
     volumes:
       - ".:/root/"
+    read_only: true
+    networks:
+      - NOTICE-ME-GUILLAUME-SENPAI
+
+  # start shellcheck service based on image created by maintainer
   shellcheck:
     image: koalaman/shellcheck-alpine
     #command: shellcheck
-    command: tail -f /dev/null 
+    command: tail -f /dev/null
     working_dir: /root
     volumes:
       - ".:/root/"
+    tty: false
+    read_only: true
+    networks:
+      - NOTICE-ME-GUILLAUME-SENPAI
+
+  # start pep8 service based on Holberton's specifications
   pep8:
     image: romalms10/pep8
     command: tail -f /dev/null
     volumes:
       - ".:/root/"
+    read_only: true
+    networks:
+      - NOTICE-ME-GUILLAUME-SENPAI
+
+  # TODOelaine add readme generator docker image
+  # readme:
+
+
+networks:
+  NOTICE-ME-GUILLAUME-SENPAI:
+    driver: bridge
