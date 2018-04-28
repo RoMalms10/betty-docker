@@ -12,6 +12,6 @@ services:
       - ".:/root/"
   pep8:
     image: romalms10/pep8
-    command: ["ash"]
+    command: tail -f /dev/null
     volumes:
       - ".:/root/"
