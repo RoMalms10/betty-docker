@@ -10,7 +10,7 @@ if len(argv) < 2:
 
 cwd = os.getcwd()
 args = ['docker', 'run', '--rm', '-it', '--name', 'bettyd']
-args += ['--mount', f'type=bind,source={cwd},target=/Betty']
+args += ['--mount', 'type=bind,source={},target=/Betty'.format(cwd)]
 args += ['betty-docker', 'betty']
 for arg in argv[1:]:
     args.append(arg)
