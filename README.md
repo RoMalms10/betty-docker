@@ -14,21 +14,21 @@ This project was created for Holberton School's 2018 Docker Hackathon. Our task 
 
 ### Requirements
 
-Install Docker on Ubuntu 14.04 LTE:
+- [Make](https://www.gnu.org/software/make/)
+- [Docker](https://www.docker.com/get-docker) version 18.02.0+
 
-```sh
-sudo apt-get update
-sudo apt-get install docker-ce
-```
+    Check correct version: `docker --version`
+- [Docker Compose](https://docs.docker.com/compose/overview/) version 1.21
 
-Install Docker on Windows or Mac OS:
-
-- Go to [Docker](https://www.docker.com/get-docker)
-- Download the Docker Community Edition (CE)
+    Check correct version: `docker-compose --version`
 
 ### Installation
 
-TODO include steps for how to run container here
+```bash
+git clone https://github.com/eightlimbed/betty-docker.git
+cd betty-docker
+make hbtn
+```
 
 ### Description
 
@@ -54,7 +54,7 @@ Dockerize [Betty](https://github.com/holbertonschool/Betty) - Holberton's C code
 - [x] select base image
 - [x] set up automated builds using docker cloud
 - [x] write prototype for script
-- [ ] include PEP8 and Shellcheck using Docker Compose.
+- [x] include PEP8 and Shellcheck using Docker Compose.
 - [ ] make Betty Docker a web service.
 - [ ] expand social media presence by creating Twitter account
 - [ ] livestream team progress
