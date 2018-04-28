@@ -9,9 +9,9 @@ services:
     image: koalaman/shellcheck-alpine
     command: ["ash"]
     volumes:
-      - .:./
+      - ".:/root/"
   pep8:
-    image: eeacms/pep8
+    image: romalms10/pep8
     command: ["ash"]
     volumes:
-      - .:./
+      - ".:/root/"
