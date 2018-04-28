@@ -2,7 +2,6 @@
 
 import subprocess
 import os
-import glob
 from sys import argv
 
 if len(argv) < 2:
@@ -10,10 +9,7 @@ if len(argv) < 2:
     exit()
 
 cwd = os.getcwd()
-path = cwd.split('/')
-args = ['docker', 'run', '--rm', '-it', '--name', 'bettyd']
-args += ['--mount', 'type=bind,source={},target=/Betty'.format(cwd)]
-args += ['betty-docker', 'betty']
+args = [ 'sudo', 'docker-compose', 'exec', 'betty', 'betty']
 for arg in argv[1:]:
     args.append(arg)
 subprocess.call(args)
