@@ -32,9 +32,7 @@ TODO include steps for how to run container here
 
 ### Description
 
-To create an easier user experience and workflow for Holberton Students while they go through the program.
-
-Botbier aims to minimize frustrations with setting up the StarCraft II Learning Environment through improved documentation and containerization. By removing barriers to setup, this project allows developers to start creating StarCraft II agents in a matter of minutes.
+Betty Docker aims to create an easier user experience and workflow for Holberton Students. Since students often program on their own machines, Docker provides an ideal solution that allows us to streamline and standardize the set up of Holberton School's development environment. By removing barriers to setup, this project allows students to spend less time setting up tools and more time programming! 💪
 
 ### Goal
 
@@ -53,6 +51,9 @@ Dockerize [Betty](https://github.com/holbertonschool/Betty) - Holberton's C code
 
 #### Stretch Goals and Roadmap
 
+- [x] select base image
+- [x] set up automated builds using docker cloud
+- [x] write prototype for script
 - [ ] include PEP8 and Shellcheck using Docker Compose.
 - [ ] make Betty Docker a web service.
 - [ ] expand social media presence by creating Twitter account
