@@ -2,9 +2,9 @@ version: "3"
 services:
   betty:
     image: eightlimbed/betty-docker
-    command: ["ash"]
+    command: tail -f /dev/null
     volumes:
-      - .:./
+      - ".:/root/"
   shellcheck:
     image: koalaman/shellcheck-alpine
     command: ["ash"]
