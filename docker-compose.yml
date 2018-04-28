@@ -7,7 +7,9 @@ services:
       - ".:/root/"
   shellcheck:
     image: koalaman/shellcheck-alpine
-    command: ["ash"]
+    #command: shellcheck
+    command: tail -f /dev/null 
+    working_dir: /root
     volumes:
       - ".:/root/"
   pep8:
