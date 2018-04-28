@@ -10,7 +10,6 @@ if len(argv) < 2:
 
 cwd = os.getcwd()
 args = ['sudo', 'docker-compose', 'exec', 'pep8', 'pep8']
-# args += ['pep8']
 for arg in argv[1:]:
     args.append(arg)
 subprocess.call(args)
