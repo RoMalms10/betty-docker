@@ -2,6 +2,7 @@
 
 import subprocess
 import os
+import glob
 from sys import argv
 
 if len(argv) < 2:
