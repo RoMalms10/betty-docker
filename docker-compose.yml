@@ -1,0 +1,5 @@
+version: "3"
+services:
+  betty:
+    image: eightlimbed/betty-docker
+
